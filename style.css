@@ -1,0 +1,90 @@
+html, body{
+}
+
+button{
+  color: white;
+}
+
+
+.active-opacity{
+  opacity: 1;
+}
+
+
+
+#body{
+  margin: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #70CB4FFF;
+  color: white;
+  transition: background-color 1s linear;
+}
+
+.hide-vol{
+  visibility: hidden;
+}
+
+.show-vol{
+  visibility: visible;
+}
+
+svg{
+  transform: scale(2);
+  opacity: 0.6;
+}
+
+
+
+
+#vol-slider{
+  width: 40%;
+}
+
+/* input range thumb */
+#vol-slider::-moz-range-thumb{
+  height: 20px;
+  width: 8%;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+#vol-slider::-webkit-slider-thumb{
+  height: 20px;
+  width: 8%;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+#vol-slider::-ms-thumb{
+  height: 20px;
+  width: 8%;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/*input range track */
+#vol-slider::-moz-range-track{
+  background: lightgray;
+  border-radius: 4px;
+  height: 5px;
+}
+
+#vol-slider::-webkit-slider-runnable-track{
+  background: lightgray;
+  border-radius: 4px;
+  height: 5px;
+}
+
+#vol-slider::-ms-track{
+  background: lightgray;
+  border-radius: 4px;
+  height: 5px;
+}
+
+#vol-slider::-ms-fill-upper{
+  background-color: white;
+}
