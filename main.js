@@ -25,15 +25,26 @@ const rndom_btn = document.querySelectorAll(".random-btn");
 const prod_btn = document.querySelector(".productivity-btn-btn");
 const relax_btn = document.querySelector(".relax-btn");
 const audio_class = {rain:"rain",storm:"storm",
-		    	radio:"radio",droplet:"droplet",moon:"moon",
+			radio:"radio",droplet:"droplet",moon:"moon",
 			activity:"activity",clock:"clock",
 			truck:"truck",users:"users"};
 
 // icon click control
 document.addEventListener("click", function(e){
 	let target = e.target;
+
+	// main volume click
+	if(target.matches(".main-vol")){
+		target.classList.toggle("active-opacity");
+		target.classList.toggle("feather-volume-2");
+		target.setAttribute('data-feather', 'volume-x');
+		if(target.classList.contains('feather-volume-2')){
+			target.removeAttribute('data-feather', 'volume-x');
+		}
+	}
+
 	// icon click
-	if(target.matches("svg")){
+	if(target.matches("#noise-icon")){
 		const br = target.nextElementSibling;
 		const vol = br.nextElementSibling;
 		const audio = target.parentNode.childNodes[1];
@@ -62,16 +73,44 @@ document.addEventListener("click", function(e){
 				vol.classList.toggle("show-vol");
 				if(vol.classList.contains("show-vol") && rand_icon.classList.contains("active-opacity") && rand_icon.classList.contains("random")){
 					audio.play();
-				}
-				else{
+				}else{
 					rand_icon.classList.remove("active-opacity");
 					rand_icon.classList.remove("random");
 					audio.pause();
 				}
-			}catch(error){
-			}
+				if(i > 3){
+					i -= 1;
+				}
+			}catch(error){}
 		}
 	}
+	// productivity btn click
+	if(target.matches(".productivity-btn")){
+		for(let i = 0; i < 3; i++){
+			try{
+				const icon = icons[Math.round(Math.random() * icons.length)];
+				const br = icon.nextElementSibling;
+				const vol = br.nextElementSibling;
+				const audio = icon.parentNode.childNodes[1];
+				if(icon.classList.contains("productivity")){
+					console.log(icon.className);
+					icon.classList.add("active-opacity");
+					vol.classList.toggle("show-vol");
+					if(vol.classList.contains("show-vol") && icon.classList.contains("active-opacity")){
+						audio.play();
+					}else{
+						icon.classList.remove("active-opacity");
+						audio.pause();
+					}
+				}
+			}catch(error){}
+		}
+	}
+	// relax btn click
+	if(target.matches(".relax-btn")){
+		
+	}
+
 });	
 
 // volume control
@@ -81,5 +120,5 @@ document.addEventListener('input', function(e){
 		const audio = target.parentNode.childNodes[1];
 		audio.volume = target.value;
 	}
-
 });						
+
