@@ -16,72 +16,67 @@
     <div class="container">
       <div class="d-flex justify-content-between">
         <div class="p-2">
-          One of three columns
         </div>
         <div class="p-2">
-          <h1>Woosah</h1>
-        </div>
-        <div class="p-2">
-          One of three columns
+          <i class="main-vol vol-on" data-feather="volume-2"></i>
         </div>
       </div>
     </div>
 
-      <div class="d-flex justify-content-center">
-        <p>Improve focus and boost your productivity.</p>
-        <p> Mix different sounds and create your perfect environment.</p>
-      </div>
+    <h1>Woosah</h1>
+    <p>Audio to improve your productivity.</p>
+    <p>Combine & mix various sounds to create your ideal environment.</p>
 
-      <div class="d-flex justify-content-center">
-        <button type="button" class="random-btn btn btn-primary-outline mr-3">Random</button>
-        <button type="button" class="productivity-btn btn btn-primary-outline mr-3">Productivity</button>
-        <button type="button" class="relax-btn btn btn-outline-primary mr-3">Relax</button>
-      </div>
+    <div class="d-flex justify-content-center mb-4">
+      <button type="button" class="random-btn btn btn-outline-light mr-3">Random</button>
+      <button type="button" class="productivity-btn btn btn-outline-light mr-3">Productivity</button>
+      <button type="button" class="relax-btn btn btn-outline-light mr-3">Relax</button>
+    </div>
 
-      <div class="container mt-5">
-        <div class="d-flex justify-content-center">
-          <div class="col-4">
-            <audio class="relax" id="rain" src="https://s3.amazonaws.com/rainmp3/Sound+Effect+Of+Rain.mp3"></audio>
-            <i class="rain opacity" id="noise-icon" data-feather="cloud-rain"></i>
-            <br>
-            <input type="range" id="vol-slider" class="hide-vol mt-4" min="0.0" max="1" step="0.1" value="0.5">
-          </div>
-          <div class="col-4">
-            <audio class="relax" id="storm"  src="https://s3.amazonaws.com/stormmp3/Heavy+Storm+5+mins+of+sound+effect.mp3"></audio>
-            <i class="storm opacity" id="noise-icon" data-feather="cloud-lightning"></i>
-            <br>
-            <input type="range" id="vol-slider" class="hide-vol mt-4" min="0.0" max="1" step="0.1" value="0.2">
-          </div>
+    <div class="container mt-5">
+      <div class="d-flex justify-content-center">
+        <div class="col-4">
+          <audio class="relax" id="rain" src="https://s3.amazonaws.com/rainmp3/Sound+Effect+Of+Rain.mp3"></audio>
+          <i class="rain opacity" id="noise-icon" data-feather="cloud-rain"></i>
+          <br>
+          <input type="range" id="vol-slider" class="hide-vol mt-4" min="0.0" max="1" step="0.1" value="0.2">
         </div>
-        <div class="d-flex justify-content-center">
-          <div class="col-4 mt-5">
-            <audio class="relax" id="moon"  src="https://s3.amazonaws.com/night-time/Night+Time+Sound+Effect.mp3"></audio>
-            <i class="moon opacity" id="noise-icon" data-feather="moon"></i>
-            <br>
-            <input type="range" id="vol-slider" class="hide-vol mt-4" min="0.0" max="1" step="0.1" value="0.5">
-          </div>
-          <div class="col-4 mt-5">
-            <audio class="productivity" id="radio"  src="https://s3.amazonaws.com/radio-tune/Radio+Tuning+Sound+Effect.mp3"></audio>
-            <i class="radio opacity" id="noise-icon" data-feather="radio"></i>
-            <br>
-            <input type="range" id="vol-slider" class="hide-vol mt-4" min="0.0" max="1" step="0.1" value="0.5">
-          </div>
+        <div class="col-4">
+          <audio class="relax" id="storm"  src="https://s3.amazonaws.com/stormmp3/Heavy+Storm+5+mins+of+sound+effect.mp3"></audio>
+          <i class="storm opacity" id="noise-icon" data-feather="cloud-lightning"></i>
+          <br>
+          <input type="range" id="vol-slider" class="hide-vol mt-4" min="0.0" max="1" step="0.1" value="0.1">
         </div>
-        <div class="d-flex justify-content-center">
-          <div class="col-4 mt-5">
-            <audio class="relax" id="droplet"  src="https://s3.amazonaws.com/stormmp3/Heavy+Storm+5+mins+of+sound+effect.mp3"></audio>
-            <i class="droplet opacity" id="noise-icon" data-feather="droplet"></i>
-            <br>
-            <input type="range" id="vol-slider" class="hide-vol mt-4" min="0.0" max="1" step="0.1" value="0.5">
-          </div>
-          <div class="col-4 mt-5">
-            <audio class="productivity" id="activity"  src="https://s3.amazonaws.com/heart-rrate/Heart+Rate+Monitor+mov.mp3"></audio>
-            <i class="activity opacity" id="noise-icon" data-feather="activity"></i>
-            <br>
-            <input type="range" id="vol-slider" class="hide-vol mt-4" min="0.0" max="1" step="0.1" value="0.1">
-          </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="col-4 mt-5">
+          <audio class="relax" id="moon"  src="https://s3.amazonaws.com/night-time/Night+Time+Sound+Effect.mp3"></audio>
+          <i class="moon opacity" id="noise-icon" data-feather="moon"></i>
+          <br>
+          <input type="range" id="vol-slider" class="hide-vol mt-4" min="0.0" max="1" step="0.1" value="0.5">
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="col-4 mt-5">
+          <audio class="productivity" id="radio"  src="https://s3.amazonaws.com/radio-tune/Radio+Tuning+Sound+Effect.mp3"></audio>
+          <i class="radio opacity productivity" id="noise-icon" data-feather="radio"></i>
+          <br>
+          <input type="range" id="vol-slider" class="hide-vol mt-4" min="0.0" max="1" step="0.1" value="0.3">
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="col-4 mt-5">
+          <audio class="relax" id="speaker"  src="https://s3.amazonaws.com/stormmp3/Heavy+Storm+5+mins+of+sound+effect.mp3"></audio>
+          <i class="speaker opacity" id="noise-icon" data-feather="speaker"></i>
+          <br>
+          <input type="range" id="vol-slider" class="hide-vol mt-4" min="0.0" max="1" step="0.1" value="0.5">
+        </div>
+        <div class="col-4 mt-5">
+          <audio class="productivity" id="activity"  src="https://s3.amazonaws.com/heart-rrate/Heart+Rate+Monitor+mov.mp3"></audio>
+          <i class="activity opacity productivity" id="noise-icon" data-feather="activity"></i>
+          <br>
+          <input type="range" id="vol-slider" class="hide-vol mt-4" min="0.0" max="1" step="0.1" value="0.1">
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
           <div class="col-4 mt-5">
             <audio class="relax" id="clock"  src="https://s3.amazonaws.com/clock-tick/Clean+Wall+Clock+Ticking+Sound+Effect.mp3"></audio>
             <i class="clock opacity" id="noise-icon" data-feather="clock"></i>
@@ -90,7 +85,7 @@
           </div>
           <div class="col-4 mt-5">
             <audio class="productivity" id="truck"  src="https://s3.amazonaws.com/trafficmp3/New+York%2C+Traffic+-+New+York+City+Traffic+Slow+Rush+Hour%2C+Heavy+Horns+Ambience+Traffic+Ambienc.mp3"></audio>
-            <i class="truck opacity" id="noise-icon" data-feather="truck"></i>
+            <i class="truck opacity productivity" id="noise-icon" data-feather="truck"></i>
             <br>
             <input type="range" id="vol-slider" class="hide-vol mt-4" min="0.0" max="1" step="0.1" value="0.3">
           </div>
@@ -98,18 +93,22 @@
         <div class="d-flex justify-content-center">
           <div class="col-4 mt-5">
             <audio class="productivity" id="users"  src="https://s3.amazonaws.com/poplemp3/People+Talking+Sound+Effect.mp3"></audio>
-            <i class="users opacity" id="noise-icon" data-feather="users"></i>
+            <i class="users opacity productivity" id="noise-icon" data-feather="users"></i>
             <br>
             <input type="range" id="vol-slider" class="hide-vol mt-4" min="0.0" max="1" step="0.1" value="0.4">
           </div>
           <div class="col-4 mt-5">
-            <audio class="productivity" id="heart"  src="https://s3.amazonaws.com/stormmp3/Heavy+Storm+5+mins+of+sound+effect.mp3"></audio>
-            <i class="heart opacity" id="noise-icon" data-feather="heart"></i>
+            <audio class="productivity" id="zap"  src="https://s3.amazonaws.com/stormmp3/Heavy+Storm+5+mins+of+sound+effect.mp3"></audio>
+            <i class="zap productivity" id="noise-icon" data-feather="zap"></i>
             <br>
             <input type="range" id="vol-slider" class="hide-vol mt-4 heart" min="0.0" max="1" step="0.1" value="0.5">
           </div>
         </div>
       </div>
+
+      <div class="footer container-fluid d-flex justify-content-center">
+        <p class="mt-3">Created By Ty Knott</p>
+      </div> 
 
       <script>
         feather.replace()
