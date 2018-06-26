@@ -35,14 +35,23 @@ document.addEventListener("click", function(e){
 
 	// main volume click
 	if(target.matches(".main-vol")){
-		target.classList.toggle("active-opacity");
-		target.classList.toggle("feather-volume-2");
-		target.setAttribute('data-feather', 'volume-x');
-		if(target.classList.contains('feather-volume-2')){
-			target.removeAttribute('data-feather', 'volume-x');
+		vol_on.classList.toggle("hide-vol");
+		vol_off.classList.toggle("show-vol");
+		for(let i = 0; i < audioEl.length; i++){
+			if(vol_on.classList.contains("hide-vol")){
+				vol_off.classList.add("active-opacity");
+				audioEl[i].classList.add("muted");
+				audioEl[i].pause();
+			}else if(icons[i].classList.contains("active-opacity")){
+				audioEl[i].classList.remove("muted");
+				audioEl[i].play();
+			}else{
+				vol_off.classList.remove("active-opacity");
+				audioEl[i].classList.remove("muted");
+			}
 		}
 	}
-
+	
 	// icon click
 	if(target.matches("#noise-icon")){
 		const br = target.nextElementSibling;
@@ -52,12 +61,16 @@ document.addEventListener("click", function(e){
 		target.classList.remove("random");
 		vol.classList.toggle("show-vol");
 		target.classList.toggle("active-opacity");
-		if(vol.classList.contains("show-vol") && target.classList.contains("active-opacity")){
+		// audio muted
+		if(audio.classList.contains("muted")){
+			audio.pause()
+		// active opacity, vol		
+		}else if(vol.classList.contains("show-vol") && target.classList.contains("active-opacity")){
 			audio.play();
 		}else{
 			audio.pause();
 		}
-	}
+		
 	// random btn click
 	if(target.matches(".random-btn")){
 		for(let i = 0; i < 3; i++){
@@ -84,6 +97,7 @@ document.addEventListener("click", function(e){
 			}catch(error){}
 		}
 	}
+		
 	// productivity btn click
 	if(target.matches(".productivity-btn")){
 		for(let i = 0; i < 3; i++){
@@ -106,6 +120,7 @@ document.addEventListener("click", function(e){
 			}catch(error){}
 		}
 	}
+		
 	// relax btn click
 	if(target.matches(".relax-btn")){
 		
