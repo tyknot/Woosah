@@ -19,10 +19,6 @@ button{
   transition: background-color 1s linear;
 }
 
-.footer{
-  background-color: #6dc446;
-}
-
 .hide-vol{
   visibility: hidden;
 }
