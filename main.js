@@ -13,7 +13,7 @@ function color(){
 	document.body.style.backgroundColor = newColor;
 }
 
-//window.onload = setInterval(color, 10000);
+window.onload = setInterval(color, 10000);
 
 // everything audio related
 const audioEl = document.querySelectorAll("audio");
