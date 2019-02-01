@@ -9,6 +9,9 @@ button{
   opacity: 1;
 }
 
+a{
+  color: white  !important;
+}
 
 #body{
   margin: 10px;
@@ -32,38 +35,53 @@ svg{
   opacity: 0.6;
 }
 
-.main-vol{
+.vol-on{
+  position: fixed;
+  transform: scale(2);
+}
+
+.vol-off{
   position: fixed;
   transform: scale(2);
 }
 
 #vol-slider{
   width: 40%;
+  -webkit-appearance: none;
 }
 
 /* input range thumb */
 #vol-slider::-moz-range-thumb{
+  border: 5px solid #DDDDDDFF;
   height: 20px;
-  width: 8%;
-  border-radius: 50%;
-  background: #ffffff;
+  width: 20px;
+  border-radius: 12px;
+  background: gray;
   cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6px;
 }
 
 #vol-slider::-webkit-slider-thumb{
+  border: 5px solid #DDDDDDFF;
   height: 20px;
-  width: 8%;
-  border-radius: 50%;
-  background: #ffffff;
+  width: 20px;
+  border-radius: 12px;
+  background: gray;
   cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6px;
 }
 
 #vol-slider::-ms-thumb{
+  border: 5px solid #DDDDDDFF;
   height: 20px;
-  width: 8%;
-  border-radius: 50%;
-  background: #ffffff;
+  width: 20px;
+  border-radius: 12px;
+  background: gray;
   cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6px;
 }
 
 /*input range track */
@@ -74,17 +92,23 @@ svg{
 }
 
 #vol-slider::-webkit-slider-runnable-track{
-  background: lightgray;
+  background: transparent;
   border-radius: 4px;
   height: 5px;
 }
 
 #vol-slider::-ms-track{
-  background: lightgray;
+  background: transparent;
   border-radius: 4px;
   height: 5px;
 }
 
 #vol-slider::-ms-fill-upper{
   background-color: white;
+}
+
+@media screen and (device-width:500px){
+    #vol-slider{
+    width: 70%;
+  }
 }
